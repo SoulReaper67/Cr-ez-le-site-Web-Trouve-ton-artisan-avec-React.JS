@@ -190,6 +190,8 @@ Contrôles exécutés
 
 Accessibilité et limites
 
+CSS compilé, Bootstrap inclus : <b>0 erreur et 498 avertissements</b> avec le profil W3C par défaut « CSS niveau 3 + SVG ». Les avertissements concernent notamment les redéfinitions, variables CSS et extensions des navigateurs. Le profil CSS3 sans SVG signale 22 erreurs sur des propriétés utilisées par Bootstrap (pointer-events, mask et fill) ; les deux rapports sont conservés dans docs/validation.
+
 Langue fr, titres hiérarchisés, régions sémantiques, labels, texte numérique des notes, focus visible, lien d’évitement, annonces des états et adaptation au mouvement réduit. Une revue complète au lecteur d’écran n’a pas été réalisée : aucune certification WCAG n’est revendiquée.
 
 La compilation locale réussit malgré des avertissements Sass de Bootstrap. Sur l’offre gratuite, le build distant a été arrêté : les fichiers compilés localement ont donc été déployés. Le site HTTPS, la recherche et les fiches ont été vérifiés sur alwaysdata. Le SMTP a accepté un message de test vers la propre boîte du projet. Les preuves figurent dans docs/validation.

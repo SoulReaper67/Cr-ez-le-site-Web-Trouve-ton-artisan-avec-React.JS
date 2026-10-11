@@ -19,7 +19,16 @@
   Les gouttières de la fiche ont été corrigées de g-5 à g-4 après ce contrôle.
 - Navigation, recherche et message d'indisponibilité SMTP observés dans le navigateur.
 
-## Accessibilité
+## Validation CSS complémentaire
+Le CSS compilé, Bootstrap inclus, a été contrôlé par le validateur W3C.
+Profil par défaut CSS niveau 3 + SVG : 0 erreur et 498 avertissements.
+Les avertissements concernent notamment des redéfinitions, variables CSS,
+couleurs et extensions propres aux navigateurs. Le profil CSS3 sans SVG
+signale 22 erreurs sur pointer-events, mask et fill employés par Bootstrap.
+Les deux rapports sont conservés : validation/css.json et css3-strict.json.
+Ce contrôle n’est pas une certification d’accessibilité.
+
+## Contrôles d’accessibilité
 Langue française, régions header/main/footer/nav, titres hiérarchisés, lien d'évitement,
 labels des champs, champs obligatoires, texte numérique de la note, états de chargement,
 focus visible, annonce du résultat, navigation React qui replace le focus dans main,

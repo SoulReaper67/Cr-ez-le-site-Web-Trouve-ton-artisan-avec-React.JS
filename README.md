@@ -103,6 +103,7 @@ l'environnement du connecteur ne disposait pas de cette police.
 - `npm run build` : compilation React et Sass.
 - `npm audit` : surveillance des dépendances.
 - Voir docs/verification.md pour les contrôles d'intégration et de HTML.
+- W3C CSS (profil par défaut CSS3 + SVG) : 0 erreur, 498 avertissements ; rapports dans docs/validation.
 
 ## Organisation
 
