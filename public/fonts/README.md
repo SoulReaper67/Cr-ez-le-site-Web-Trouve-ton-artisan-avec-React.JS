@@ -1,0 +1,1 @@
+Polices Graphik Trial fournies par l’étudiant : usage personnel uniquement selon Befonts-License.txt. Elles sont incluses dans le ZIP du devoir pour son utilisation locale. Elles sont exclues de Git pour ne pas les redistribuer publiquement. Pour un hébergement public, obtenir une licence web adaptée et remplacer les fichiers par les polices autorisées.
