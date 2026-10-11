@@ -44,13 +44,20 @@ Sources consultées le 11/10/2026 :
 - https://www.w3.org/TR/WCAG21/
 - https://validator.w3.org/nu/
 
-## Limites encore ouvertes
-Déploiement sur RunHosting à vérifier : les sessions accessibles demandent encore une connexion.
-Le domaine prévu est trouve-ton-artisan.twinmistudio.com et la boîte prévue
-contact@trouve-ton-artisan.twinmistudio.com. Une adresse email seule ne fournit pas le serveur,
-le port ou les identifiants SMTP. Le service doit accepter Node.js et MySQL/MariaDB.
-Pas de validation du HTTPS ni de livraison externe SMTP tant que le déploiement n'est pas fait.
-Graphik Trial : usage personnel seulement selon la notice jointe ; licence web nécessaire
-avant diffusion publique. Figma contient 27 vues natives éditables, mais le connecteur
-n'a pas la police Graphik installée et sa limite gratuite empêche des retouches supplémentaires.
-Les cinq exports desktop sont issus de Figma, les six captures responsive du site local.
+## Déploiement vérifié le 11 octobre 2026
+- alwaysdata Free : Node.js 24, MariaDB 11.8, 17 artisans importés.
+- HTTPS : accueil, recherche Chocolaterie (1 résultat) et fiche vérifiés.
+- Compte MySQL : lecture seule sur la base dédiée.
+- SMTP TLS port 465 : authentification vérifiée ; réponse 250 à un message
+  vers trouveartisan@alwaysdata.net, la propre boîte du projet. La réception
+  dans le webmail n’a pas été contrôlée. Aucun artisan n’a reçu de test.
+- Redémarrage dans le panneau : site et données toujours accessibles.
+- Build local déployé via la branche deployment : build distant arrêté faute
+  de ressources sur l’offre gratuite.
+- .env privé du serveur ; aucun secret dans GitHub ou le ZIP.
+
+## Point restant : police Graphik
+Graphik Trial : usage personnel seulement selon la notice jointe ; licence web
+nécessaire pour utiliser Graphik sur le site public, qui utilise actuellement Arial.
+Figma contient 27 vues natives éditables ; le connecteur ne dispose pas de Graphik.
+Les cinq exports desktop viennent de Figma, les six captures responsive du site local.

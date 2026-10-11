@@ -68,9 +68,24 @@ Choisir un hébergement qui exécute Node.js et une base MySQL/MariaDB.
    à confirmer auprès de l'hébergeur) pour les limitations de requêtes.
 7. Vérifier une fiche ouverte directement, la recherche et un envoi vers une boîte de test.
 
-**État actuel : site testé en local. Le domaine prévu est trouve-ton-artisan.twinmistudio.com (RunHosting).
-L’accès au panneau, la compatibilité Node.js et les paramètres SMTP restent à vérifier.
-Le lien fonctionnel public reste à valider avant remise.**
+**Site déployé : https://trouveartisan.alwaysdata.net/ sur alwaysdata Free.**
+MariaDB 11.8 contient les 4 catégories, 15 spécialités et 17 artisans. Le compte
+SQL est limité à la lecture. Le SMTP TLS (port 465) est configuré : authentification
+vérifiée et message de test vers la propre boîte du projet accepté (réponse 250).
+Aucun test n’a été envoyé aux artisans de la formation.
+
+L’offre gratuite impose le sous-domaine alwaysdata.net. Le domaine Twinmistudio
+initialement prévu n’est pas utilisé. Le build distant a été arrêté par une limite
+de ressources ; la branche GitHub `deployment` contient le build local vérifié.
+Pour mettre à jour le site, construire localement, transférer dist et les sources
+modifiées, puis redémarrer le site dans Web → Sites.
+
+Configuration du site alwaysdata : type Node.js, version 24, commande
+`node server/index.js`, répertoire de travail `trouve-ton-artisan`.
+Conserver le PORT fourni par alwaysdata. APP_ORIGIN vaut
+https://trouveartisan.alwaysdata.net et TRUST_PROXY vaut 1 sur ce déploiement.
+Les accès SQL et SMTP sont uniquement dans le .env privé du serveur, absent du ZIP.
+Ne pas réimporter les scripts dans les bases distantes déjà alimentées.
 
 ## Police Graphik
 
@@ -103,7 +118,7 @@ l'environnement du connecteur ne disposait pas de cette police.
 
 - [Maquettes Figma complètes](https://www.figma.com/design/aLEK2PR87VNLpFY1KOIhYz)
 - [Dépôt GitHub](https://github.com/SoulReaper67/Cr-ez-le-site-Web-Trouve-ton-artisan-avec-React.JS)
-- Domaine prévu : https://trouve-ton-artisan.twinmistudio.com (déploiement non confirmé).
+- [Site en ligne](https://trouveartisan.alwaysdata.net/)
 
 ## Points à comprendre pour présenter le devoir
 

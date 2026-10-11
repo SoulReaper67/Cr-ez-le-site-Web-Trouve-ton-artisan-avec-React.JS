@@ -4,7 +4,7 @@
 
 Application, maquettes, modélisation des données, sécurité et vérifications.
 
-<b>État du livrable :</b> projet fonctionnel et vérifié en local. La mise en ligne sur le domaine fourni et la configuration SMTP de production restent à confirmer. Ces points sont explicités page 14.
+<b>État du livrable :</b> projet vérifié en local et déployé en HTTPS sur alwaysdata. MySQL contient les 17 artisans et le SMTP est configuré et vérifié. Le point restant concernant la licence web Graphik est expliqué page 14.
 
 Sommaire
 
@@ -192,7 +192,7 @@ Accessibilité et limites
 
 Langue fr, titres hiérarchisés, régions sémantiques, labels, texte numérique des notes, focus visible, lien d’évitement, annonces des états et adaptation au mouvement réduit. Une revue complète au lecteur d’écran n’a pas été réalisée : aucune certification WCAG n’est revendiquée.
 
-La compilation affiche des avertissements de dépréciation Sass provenant de Bootstrap ; ils n’empêchent pas le build. La livraison externe SMTP, le HTTPS public et l’hébergement restent à contrôler. Les preuves JSON figurent dans docs/validation.
+La compilation locale réussit malgré des avertissements Sass de Bootstrap. Sur l’offre gratuite, le build distant a été arrêté : les fichiers compilés localement ont donc été déployés. Le site HTTPS, la recherche et les fiches ont été vérifiés sur alwaysdata. Le SMTP a accepté un message de test vers la propre boîte du projet. Les preuves figurent dans docs/validation.
 
 Maquettes : accueil sur ordinateur
 
@@ -256,17 +256,19 @@ Liens et finalisation de la remise
 
 <link href="https://www.figma.com/design/aLEK2PR87VNLpFY1KOIhYz" color="#0074c7"><u>Maquettes Figma complètes et éditables</u></link>
 
-Mise en ligne à terminer
+Site accessible en ligne
 
-Domaine fourni : <b>trouve-ton-artisan.twinmistudio.com</b>. Panneau : RunHosting. Boîte prévue : <b>contact@trouve-ton-artisan.twinmistudio.com</b>. Ces informations identifient la destination prévue ; elles ne prouvent pas que le projet a été déployé.
+<link href="https://trouveartisan.alwaysdata.net/" color="#0074c7"><u>https://trouveartisan.alwaysdata.net/</u></link>
 
-À la préparation du dossier, les sessions accessibles demandaient encore une connexion. Il reste à confirmer que l’offre exécute Node.js et autorise la connexion MySQL, importer les scripts dans une base vide, configurer les variables privées, activer HTTPS et vérifier un envoi SMTP vers une boîte de test.
+Le projet fonctionne sur alwaysdata avec Node.js et MariaDB 11.8 : 4 catégories, 15 spécialités et 17 artisans. L’accueil, la recherche et les fiches ont été vérifiés en HTTPS après redémarrage. Le compte SQL ne possède que les droits de lecture sur la base dédiée.
 
-<b>Lien du site accessible en ligne : non encore validé.</b> Le domaine prévu doit être testé après déploiement et cette mention remplacée par le lien fonctionnel avant remise finale au CEF.
+Le SMTP est configuré en TLS sur le port 465. L’authentification a réussi et un message de vérification envoyé à la propre boîte du projet a été accepté par le serveur (réponse 250). Aucun message de test n’a été envoyé aux artisans. Le parcours de contact complet a aussi été vérifié en local avec un serveur SMTP de capture.
+
+L’offre gratuite utilise le sous-domaine alwaysdata.net. Le domaine Twinmistudio initialement prévu n’est pas utilisé pour ce déploiement. La branche GitHub deployment contient le build local, car les ressources gratuites ne suffisaient pas à compiler sur le serveur. Les secrets sont stockés uniquement sur l’hébergement, hors GitHub et ZIP.
 
 Police et présentation personnelle
 
-Graphik Trial est fournie dans le ZIP pour un usage personnel local. La notice « Personal Use Only » ne permet pas d’affirmer une autorisation de diffusion web : fournir une licence adaptée avant publication. Les fichiers de police sont exclus du dépôt public.
+Graphik Trial est fournie dans le ZIP pour un usage personnel local. Sa notice « Personal Use Only » ne confirme pas une licence web. Le site public utilise donc Arial en remplacement ; une licence web Graphik est nécessaire pour respecter intégralement la typographie du brief en ligne. Les fichiers de police sont exclus du dépôt public.
 
 Compléter la couverture avec votre nom si nécessaire, lire le README, lancer le site et vous assurer de pouvoir expliquer les composants React, les relations SQL, les routes Express et le formulaire.
 
